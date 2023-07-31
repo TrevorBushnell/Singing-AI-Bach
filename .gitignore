@@ -173,3 +173,6 @@ cython_debug/
 *.cb
 *.cb2
 .*.lb
+
+output.mid
+output.musicxml
