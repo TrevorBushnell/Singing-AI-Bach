@@ -1,0 +1,3 @@
+# Research
+
+This directory contains all papers and book chapters that I used for my thesis. These are all open-source papers that can be linked elsewhere. Citing sources can be found in the `papers` directory. Papers are sorted by type OR the textbook from which they came from. Within each directory you can also find an `annotated_bib.md` file which has all the annotated bibliographies for each article I have read in that topic.
