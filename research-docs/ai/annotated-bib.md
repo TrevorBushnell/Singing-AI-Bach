@@ -28,4 +28,6 @@ This will be another model that I can use in my research, but getting this model
 
 ### Counterpoint by Convolution
 
-This is the rigorous paper that goes with the Google Bach AI Doodle. The paper adds onto the online article by noting that the model is a convolutional neural network because of its extreme versatility once trained. Data is represented as a stack of piano rolls in a binary 3D tenor. One dimension is the number of voice parts, 
+This is the rigorous paper that goes with the Google Bach AI Doodle. The paper adds onto the online article by noting that the model is a convolutional neural network because of its extreme versatility once trained. Data is represented as a stack of piano rolls in a binary 3D tenor. One dimension is the number of voice parts, one dimension is the number of midi pitches, and one dimension is the number of time steps in the piece. The paper also notes that for their use case, Gibbs sampling leads to better results than ancestral sampling. 
+
+This is useful for my research because I can get more in-depth information about how this model is designed.
