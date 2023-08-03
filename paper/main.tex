@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.43 (17/5/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, twoside,openright]{Thesis} % The default font size and one-sided printing (no margin offsets)
+\renewcommand{\contentsname}{Table of Contents}
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+
+\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{indentfirst}
+%\usepackage{setspace}
+%\doublespacing
+%\usepackage{cite}
+%\usepackage{hyperref}
+%\usepackage{float}
+\usepackage{notoccite}
+%\usepackage{epstopdf}
+%\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{hhline}
+\usepackage{textcomp}
+%\usepackage{gensymb}
+\usepackage{breqn}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	IMPORTANT TITLE PAGES
+%----------------------------------------------------------------------------------------
+\input{cover}
+\input{abstract}
+\input{Acknowledgment}
+
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+\clearpage
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+%\phantomsection
+\lhead{\emph{Table of Contents}} % Set the left side page header to "Table of Contents"
+\tableofcontents % Write out the Table of Contents
+
+
+\clearpage
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\clearpage
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\input{Chapters/Chapter1}
+\input{Chapters/Chapter2} 
+\input{Chapters/Chapter3}
+\input{Chapters/Chapter4} 
+%\input{Chapters/Chapter5} 
+%\input{Chapters/Chapter6} 
+%\input{Chapters/Chapter7} 
+
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+\label{Bibliography}
+\renewcommand{\bibname}{References}
+\phantomsection
+\addtotoc{References}
+\lhead{\emph{References}} % Change the page header to say "References"
+
+\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\input{Appendices/AppendixA}
+%\input{Appendices/AppendixB}
+%\input{Appendices/AppendixC}
+
+
+
+\end{document}  
