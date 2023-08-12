@@ -1,31 +1,67 @@
-import csv
-import ast
+# import the correct packages
+import re
+import pandas as pd
+from collections import namedtuple
 
-def read_lisp_data(file_path):
-    with open(file_path, 'r') as f:
-        data = f.read()
-    return ast.literal_eval(data)
+# define a Data datatype to get column and value information
+Data = namedtuple('Data', ['col', 'value'])
 
-def process_data(lisp_data):
-    # Process your Lisp data and transform it into a list of lists or a list of dictionaries
-    # representing rows of data to be written to the CSV file.
-    processed_data = []
+# read the lines into Python
+with open('chorales.lisp', 'r') as f:
+    data = f.readlines()
 
-    # Sample processing: Assuming the Lisp data is a list of lists, we will simply use it as CSV rows.
-    processed_data = lisp_data
+# delete all lines that are just a newline
+while '\n' in data:
+    data.remove('\n')
 
-    return processed_data
+# remove the newlines from each row of the data
+for i in range(len(data)):
+    data[i] = data[i].replace('\n', '')
 
-def write_to_csv(csv_file, data):
-    with open(csv_file, 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerows(data)
+# create a dictionary mapping each chorale ID to the rows with that chorale
+data_dict = {}
 
-if __name__ == "__main__":
-    lisp_file_path = 'chorales.lisp'
-    csv_file_path = 'chorales.csv'
+for row in data:
+    data_dict[int(row[1:row.index(' ')])] = row[row.index(' '):]
 
-    lisp_data = read_lisp_data(lisp_file_path)
-    processed_data = process_data(lisp_data)
-    write_to_csv(csv_file_path, processed_data)
+# separate out the rows into their own lists
+pattern = r'\((.*?)\)' # this is a regular expression to find strings inside ()
+for k in data_dict.keys():
+    data_dict[k] = data_dict[k].replace('((', '(')
+    data_dict[k] = re.findall(pattern, data_dict[k])
 
+# create Data objects for the data
+for k in data_dict.keys():
+    for i in range(len(data_dict[k])):
+        c, v = data_dict[k][i].split()
+        data_dict[k][i] = Data(c, int(v))
+
+# print(data_dict[1])
+col_names = ['chorale_id', 'st', 'pitch', 'dur', 'keysig', 'timesig', 'fermata']
+chorales = []
+tmp = []
+
+# now create the csv file
+for k in data_dict.keys():
+    for val in data_dict[k]:
+        if val.col == 'st':
+            tmp.append(k)
+        
+        tmp.append(val.value)
+
+        if val.col == 'fermata':
+            chorales.append(tmp)
+            tmp = []
+
+t = pd.DataFrame(chorales, columns=col_names)
+t.to_csv('chorales_data.csv', index=False)
+
+# get the sum of all rows
+sum = 0
+
+for k in data_dict.keys():
+    sum += len(data_dict[k])
+
+print(len(t.index))
+print(sum)
+assert len(t.index) == sum // 6
