@@ -17,10 +17,9 @@ Next is the performance aspect with the choirs. This will entail creating a choi
 
 ## Final Product & Public Facing Component
 
-The final product (which is also the public facing component) will take either one of two approaches:
+The final product (which is also the public facing component) will be a talk and performance describing the music that is generated throughout the creation of this project. The final date/time/location is not yet set in stone, but the hope is for this performance to be the week before Spring Break in the 3rd Floor Chapel in College Hall. 
 
-1. A documentary explaining the research behind the AI, its relevance in the choral space, and having the choirs sing it in order to see the differences in the scores
-2. A presentation at the ACDA Northwest conference where I bring the choir and give a presentation explaining the AI and showing the differences using the choir
+Additionally, a final research paper/script will be written and completed by the end of the fall semester. More will be added to the paper after the experience of working with the choir, but all other components of the paper will be complete by this time.
 
 
 ## Assessment Plan
@@ -28,9 +27,9 @@ The final product (which is also the public facing component) will take either o
 The following 4 things will need to be completed in order to ensure that this was a successful project:
 
 1. Determine models and songs by end of Summer 2023
-2. Build a choir by end of September 2023
-3. Have a script for the presentation/documentary finished by the end of October 2023
-4. Have a documentary by the end of the semester (December 2023) OR present at ACDA Northwest January 24 - 27
+2. Continue research/data analysis through the end of October 2023
+3. Write a thesis paper by December 2023
+4. Rehearse a choir and perform the AI music in March 2024
 
 
 ## Timeline
@@ -38,35 +37,31 @@ The following 4 things will need to be completed in order to ensure that this wa
 1. Summer 2023
    1. Research other AI models beyond DeepBach
    2. Pick 2-3 chorales and generate music for each model
-   3. Try to build my own model if possible
+   3. Clean and get working functional research datasets
 2. September 2023
-   1. Recruit singers to join the project
-   2. Start rehearsing choir at end of month
-   3. Work with faculty advisor on conducting skills?
+   1. Continue reading research articles
+   2. Finish getting AI models working on my computer
+   2. Start working on data analysis
 3. October 2023
-   1. Continue rehearsing choir
-   2. Work with faculty advisor on conducting skills?
-   3. Write script for documentary (or presentation)
-   4. Meet with members of the choir to see how they feel when they sing the music
-4. November 2023
-   1. Begin recording whatever pieces I need (if doing the documentary)
-      1. Continue rehearsing the choir otherwise
-   2. Record the members reactions to singing the music (if needed for documentary)
-   3. Begin editing final product
-5. December 2023
-   1. Continue editing final product
-   2. Rehearse choir if needed
-6. January 2024 (if needed)
+   1. Finish reading research articles
+   2. Continue/finish working on data analytics
+4. November/December 2023
+   1. Write the thesis paper
+   2. Start recruiting for the choir
+6. February 2024
    1. Rehearse choir
-   2. Present at ACDA Northwest
+7. March 2024
+   1. Give the final talk/performance with the choir
 
 
 ## Materials Needed
 
-* Choir - ideally 8-12singers (2-3 voices per part)
+* Choir - ideally 8-12 singers (2-3 voices per part)
   * preferably GU students but might need to pull from Symphony Chorale
 * Rehearsal pianist - already secured (Henry Stone)
-* Maybe some funds to treat the choir to pizza or some other meal as a thank-you for working on the project?
+* $500 to be used for the following:
+   * one dinner for the choir and other helping members
+   * paying the pianist
 
 
 ## Advisor Approval / Signature
