@@ -1,0 +1,6 @@
+[submodule "models/DeepBach"]
+	path = models/DeepBach
+	url = https://github.com/Ghadjeres/DeepBach.git
+[submodule "models/bachbot"]
+	path = models/bachbot
+	url = https://github.com/feynmanliang/bachbot
