@@ -10,7 +10,17 @@ The repo contains all the resources needed when creating this project, including
 * **`datasets`:** Any datasets that were used in the research papers. Will likely do some data analysis on these datasets, including the code for parsing datasets having weird file formats.
 * **`ai-music`:** AI generated Bach chorales (including original score) for each Bach chorale that I choose to generate.
 * **`scripts`:** any test scripts or Python code that I used to help make my life easier in the project.
+* **`models`:** The AI models I am using in my research, linked as *GitHub submodules*. This means that you can relink to the GitHub repository from where I pulled the models.
 
 Additionally, `progress-log.md` lists my updates, challenges, bugs, etc. working on this project throughout the semester.
 
 My faculty advisor for this project is [Dr. Meg Stohlmann](), director of choirs at Gonzaga University.
+
+
+## HELPFUL LINKS AND COMMANDS
+
+Ability to use Magenta (for now):
+
+```
+docker run -it -p 6006:6006 -v /tmp/magenta:/magenta-data tensorflow/magenta
+```
