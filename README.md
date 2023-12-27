@@ -14,7 +14,7 @@ The repo contains all the resources needed when creating this project, including
 
 Additionally, `progress-log.md` lists my updates, challenges, bugs, etc. working on this project throughout the semester.
 
-My faculty advisor for this project is [Dr. Meg Stohlmann](), director of choirs at Gonzaga University.
+My faculty advisor for this project is [Dr. Meg Stohlmann](https://www.gonzaga.edu/college-of-arts-sciences/faculty-listing/detail/stohlmann), director of choirs at Gonzaga University.
 
 
 ## HELPFUL LINKS AND COMMANDS
