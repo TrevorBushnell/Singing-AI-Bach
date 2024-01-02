@@ -27,7 +27,9 @@ for k in json_data.keys():
 
             data.append(row)
 
-    data_list.append(pd.DataFrame(data, columns=['ChoraleID', 'TimestepID', 'SopranoMidi', 'AltoMidi', 'TenorMidi', 'BassMidi']))
+    curr_df = pd.DataFrame(data, columns=['ChoraleID', 'TimestepID', 'SopranoMidi', 'AltoMidi', 'TenorMidi', 'BassMidi'])
+    curr_df.to_csv(f'JSB-Chorales-{k}.csv', index=False)
+    data_list.append(curr_df)
     
 df = pd.concat(data_list, ignore_index=True)
 
